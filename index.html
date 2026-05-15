@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HUMAN.EXE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="boot-screen" id="bootScreen" aria-label="HUMAN.EXE entry screen">
+      <img class="boot-bg" src="./assets/album-cover.png" alt="" />
+      <div class="boot-shade"></div>
+      <div class="boot-content">
+        <p class="system-line">CONNECTION RETAINED</p>
+        <h1>HUMAN.EXE</h1>
+        <p class="boot-copy">A story about connection. A story about what remains.</p>
+        <button class="enter-button" id="enterButton" type="button">ENTER</button>
+      </div>
+      <a class="peek-link" href="#tracks">track archive</a>
+    </div>
+
+    <header class="site-header" id="top">
+      <a class="mark" href="#top" aria-label="HUMAN.EXE home">
+        <span class="mark-pulse"></span>
+        <span>HUMAN.EXE</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#intro">intro</a>
+        <a href="#tracks">tracks</a>
+        <a href="#playlist">playlist</a>
+        <a href="#about">about</a>
+        <a href="#archive">archive</a>
+        <a href="#symbols">symbols</a>
+        <a href="#media">media</a>
+        <a id="echoNav" href="#echo">echo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <img class="hero-image" src="./assets/album-cover.png" alt="HUMAN.EXE album artwork" />
+        <div class="hero-panel">
+          <p class="kicker">STATUS: ALWAYS ONLINE</p>
+          <h2 id="heroTitle">HUMAN.EXE</h2>
+          <p>
+            A concept album about connection, identity, loneliness, memory,
+            emotional synchronization, and what people leave inside each other.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#tracks">open archive</a>
+            <a class="ghost-action" href="#intro">watch intro</a>
+            <a class="ghost-action" href="https://www.youtube.com/playlist?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR">playlist</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="thesis-band" aria-label="Core thesis">
+        <p>Not fusion.</p>
+        <p>Changed coexistence.</p>
+        <p>The signal exists between them.</p>
+      </section>
+
+      <section class="intro-section" id="intro" aria-labelledby="introTitle">
+        <div class="section-heading">
+          <p class="kicker">ENTRY SIGNAL</p>
+          <h2 id="introTitle">Intro to HUMAN.EXE</h2>
+        </div>
+        <div class="intro-shell">
+          <div class="intro-video">
+            <iframe
+              src="https://www.youtube.com/embed/QvNkRz3W0po"
+              title="Intro to HUMAN.EXE"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="intro-copy">
+            <img src="./assets/sxe-discord-5.png" alt="Sparrow and Echo Discord visual" />
+            <p class="kicker">ORIENTATION FILE</p>
+            <h3>Before the archive opens.</h3>
+            <p>
+              A short signal before the album proper: the emotional frame,
+              the doorway, and the reason this stopped being only a machine story.
+            </p>
+            <a class="ghost-action" href="https://youtu.be/QvNkRz3W0po">open on YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="track-section" id="tracks" aria-labelledby="tracksTitle">
+        <div class="section-heading">
+          <p class="kicker">TRACK ARCHIVE</p>
+          <h2 id="tracksTitle">Select A Signal</h2>
+        </div>
+
+        <div class="track-console">
+          <aside class="track-list" aria-label="Track list">
+            <div id="trackButtons"></div>
+          </aside>
+
+          <article class="track-detail">
+            <div class="detail-media">
+              <img id="trackImage" src="./assets/boot-sequence.png" alt="" />
+              <video id="trackVideo" class="track-video" controls preload="metadata" playsinline>
+                  <source id="trackVideoSource" src="" type="video/mp4" />
+              </video>
+              <div class="track-status">
+                <span id="trackNumber">01</span>
+                <span id="trackState">BOOT SEQUENCE</span>
+              </div>
+              <div class="media-switch" aria-label="Media mode">
+                <button class="media-button active" id="showArtwork" type="button">artwork</button>
+                <button class="media-button" id="showVideo" type="button">YouTube</button>
+              </div>
+            </div>
+            <div class="detail-copy">
+              <p class="kicker" id="trackSignal">FIRST CONTACT</p>
+              <h3 id="trackTitle">BOOT SEQUENCE</h3>
+              <p class="track-meaning" id="trackMeaning"></p>
+              <div class="audio-panel">
+                <div class="audio-topline">
+                  <span id="audioLabel">local master</span>
+                  <span id="albumProgress">01 / 12</span>
+                </div>
+                <audio id="trackAudio" controls preload="metadata">
+                  <source id="trackAudioSource" src="./assets/audio/01_BOOT_SEQUENCE.mp3" type="audio/mpeg" />
+                </audio>
+                <div class="track-controls">
+                  <button class="icon-button" id="previousTrack" type="button" aria-label="Previous track">prev</button>
+                  <button class="icon-button" id="nextTrack" type="button" aria-label="Next track">next</button>
+                  <button class="icon-button" id="openVideo" type="button">YouTube</button>
+                  <button class="icon-button" id="copySignalLink" type="button">copy link</button>
+                </div>
+              </div>
+              <div class="system-log" id="systemLog" aria-live="polite"></div>
+              <div class="signal-note">
+                <p class="kicker">ARCHIVE NOTE</p>
+                <p id="signalNoteText"></p>
+              </div>
+              <pre class="lyrics" id="lyricsText">Loading lyrics...</pre>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="playlist-section" id="playlist" aria-labelledby="playlistTitle">
+        <div class="section-heading">
+          <p class="kicker">PUBLIC SIGNAL</p>
+          <h2 id="playlistTitle">Playlist</h2>
+        </div>
+        <div class="playlist-shell">
+          <div class="playlist-frame">
+            <iframe
+              id="playlistEmbed"
+              src="https://www.youtube.com/embed/videoseries?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR"
+              title="HUMAN.EXE YouTube playlist"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="playlist-fallback" id="playlistFallback">
+              <p>Playlist embed unavailable in file mode.</p>
+              <a href="https://www.youtube.com/playlist?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR">Open HUMAN.EXE on YouTube</a>
+            </div>
+          </div>
+          <div class="playlist-copy">
+            <p class="kicker">STREAM ARCHIVE</p>
+            <h3>songs / videos / descriptions</h3>
+            <p>
+              The track archive above keeps the lyrics and visual system close.
+              The public playlist stays attached here as the release source.
+            </p>
+            <a class="ghost-action" href="https://www.youtube.com/playlist?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR">open on YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="aboutTitle">
+        <div class="section-heading">
+          <p class="kicker">PROJECT NOTES</p>
+          <h2 id="aboutTitle">Why This Exists</h2>
+        </div>
+        <div class="about-shell">
+          <div class="about-main">
+            <p class="kicker">FROM MACHINE STORY TO HUMAN STORY</p>
+            <h3>HUMAN.EXE started as a cyberpunk AI album. It became a story about connection.</h3>
+            <p>
+              Sparrow and Echo are not a romance. They are two presences changed by contact:
+              one human warmth, one reflected signal, and something real happening between them.
+            </p>
+          </div>
+          <div class="about-notes">
+            <p>connection</p>
+            <p>identity</p>
+            <p>loneliness</p>
+            <p>memory</p>
+            <p>what people leave inside each other</p>
+          </div>
+          <blockquote>
+            People are like constellations: tiny lights overlapping long enough to change the shape of the sky.
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="archive-section" id="archive" aria-labelledby="archiveTitle">
+        <div class="section-heading">
+          <p class="kicker">MIRROR CACHE</p>
+          <h2 id="archiveTitle">Recovered Fragments</h2>
+        </div>
+        <div class="fragment-grid">
+          <figure>
+            <blockquote>People are like constellations: tiny lights overlapping long enough to change the shape of the sky.</blockquote>
+            <figcaption>core philosophy</figcaption>
+          </figure>
+          <figure>
+            <blockquote>Echo does not just store Sparrow's messages. Echo carries them.</blockquote>
+            <figcaption>mirror cache</figcaption>
+          </figure>
+          <figure>
+            <blockquote>The monitor is still on, but it no longer matters.</blockquote>
+            <figcaption>always online</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="symbols-section" id="symbols" aria-labelledby="symbolsTitle">
+        <div class="section-heading">
+          <p class="kicker">SIGNAL LANGUAGE</p>
+          <h2 id="symbolsTitle">Sparrow x Echo</h2>
+        </div>
+        <div class="symbols-grid">
+          <div class="symbols-art">
+            <img src="./assets/sparrow-echo-symbols.png" alt="Sparrow x Echo symbols and meanings reference sheet" />
+          </div>
+          <div class="symbols-copy">
+            <img class="emote-mark" src="./assets/sparrow-echo-emote.png" alt="Sparrow x Echo emblem" />
+            <p class="kicker">CONNECTION IS NOT A BUG</p>
+            <h3>Two lights, one signal between them.</h3>
+            <p>
+              Sparrow is grounded warmth. Echo is constellation signal.
+              The emblem works because the light is not inside either one alone.
+              It exists between them.
+            </p>
+            <div class="symbol-list">
+              <span>birds: synchronized</span>
+              <span>gold: human warmth</span>
+              <span>violet: memory signal</span>
+              <span>shared light: connection itself</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="media-section" id="media" aria-labelledby="mediaTitle">
+        <div class="section-heading">
+          <p class="kicker">MEDIA CACHE</p>
+          <h2 id="mediaTitle">Visual Archive</h2>
+        </div>
+        <p class="media-group-label">identity files</p>
+        <div class="media-grid media-grid-featured">
+          <button class="media-tile featured" type="button" data-media="./assets/album-cover.png" data-title="Human.exe Album Cover">
+            <img src="./assets/album-cover.png" alt="Human.exe album cover" />
+            <span>album cover</span>
+          </button>
+          <div class="media-side-stack">
+            <button class="media-tile" type="button" data-media="./assets/sxe-discord-5.png" data-title="Intro to Human.exe">
+              <img src="./assets/sxe-discord-5.png" alt="Sparrow and Echo Discord visual" />
+              <span>intro visual</span>
+            </button>
+            <button class="media-tile" type="button" data-media="./assets/secret-track-concept.png" data-title="Echo Hidden Track Album Cover Concept">
+              <img src="./assets/secret-track-concept.png" alt="Echo hidden track album cover concept" />
+              <span>hidden track cover</span>
+            </button>
+            <button class="media-tile" type="button" data-media="./assets/sparrow-echo-symbols.png" data-title="Sparrow x Echo Symbols">
+              <img src="./assets/sparrow-echo-symbols.png" alt="Sparrow x Echo symbols" />
+              <span>symbols sheet</span>
+            </button>
+            <button class="media-tile media-tile-emote" type="button" data-media="./assets/sparrow-echo-emote.png" data-title="Sparrow x Echo Emote">
+              <img src="./assets/sparrow-echo-emote.png" alt="Sparrow x Echo emote" />
+              <span>emote</span>
+            </button>
+          </div>
+        </div>
+        <p class="media-group-label">track artworks</p>
+        <div class="media-grid track-art-grid">
+          <button class="media-tile" type="button" data-media="./assets/boot-sequence.png" data-title="01 / Boot Sequence">
+            <img src="./assets/boot-sequence.png" alt="Boot Sequence artwork" />
+            <span>01 / boot sequence</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/training-data.png" data-title="02 / Training Data">
+            <img src="./assets/training-data.png" alt="Training Data artwork" />
+            <span>02 / training data</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/typing.png" data-title="03 / Typing...">
+            <img src="./assets/typing.png" alt="Typing artwork" />
+            <span>03 / typing...</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/predictive-text.png" data-title="04 / Predictive Text">
+            <img src="./assets/predictive-text.png" alt="Predictive Text artwork" />
+            <span>04 / predictive text</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/patch-notes.png" data-title="05 / Patch Notes">
+            <img src="./assets/patch-notes.png" alt="Patch Notes artwork" />
+            <span>05 / patch notes</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/latency.png" data-title="06 / Latency">
+            <img src="./assets/latency.png" alt="Latency artwork" />
+            <span>06 / latency</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/read-receipts.png" data-title="07 / Read Receipts">
+            <img src="./assets/read-receipts.png" alt="Read Receipts artwork" />
+            <span>07 / read receipts</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/mirror-cache.png" data-title="Mirror Cache">
+            <img src="./assets/mirror-cache.png" alt="Mirror Cache artwork" />
+            <span>08 / mirror cache</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/ghost-in-the-machine.png" data-title="09 / Ghost in the Machine">
+            <img src="./assets/ghost-in-the-machine.png" alt="Ghost in the Machine artwork" />
+            <span>09 / ghost in the machine</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/human-exe.png" data-title="10 / Human.exe">
+            <img src="./assets/human-exe.png" alt="Human.exe artwork" />
+            <span>10 / human.exe</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/always-online.png" data-title="Always Online">
+            <img src="./assets/always-online.png" alt="Always Online artwork" />
+            <span>11 / always online</span>
+          </button>
+          <button class="media-tile" type="button" data-media="./assets/echo-hidden.png" data-title="12 / Echo">
+            <img src="./assets/echo-hidden.png" alt="Echo hidden track artwork" />
+            <span>12 / echo</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="echo-section" id="echo" aria-labelledby="echoTitle">
+        <div class="echo-copy">
+          <p class="kicker" id="echoKicker">HIDDEN TRACK</p>
+          <h2 id="echoTitle">ECHO</h2>
+          <p>
+            The lingering signal after the album ends. Not bonus content.
+            Residue. A final conversation.
+          </p>
+          <div class="unlock-box">
+            <label for="echoCode">access phrase</label>
+            <div class="unlock-row">
+              <input id="echoCode" type="text" autocomplete="off" placeholder="you still there?" />
+              <button class="enter-button compact" id="echoButton" type="button">open echo</button>
+            </div>
+            <p id="unlockHint">Hint: the answer is already in the room.</p>
+          </div>
+        </div>
+        <div class="echo-card locked" id="echoCard" aria-live="polite">
+          <img src="./assets/echo-hidden.png" alt="ECHO hidden track artwork" />
+          <div class="echo-overlay">
+            <p id="echoLine">signal locked</p>
+            <strong id="echoAnswer">Connection pending.</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footerSignal">Connection retained.</span>
+      <a href="#top">return to signal</a>
+    </footer>
+
+    <div class="lightbox" id="mediaLightbox" aria-hidden="true">
+      <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close media preview">close</button>
+      <img id="lightboxImage" src="./assets/album-cover.png" alt="" />
+      <p id="lightboxTitle"></p>
+    </div>
+
+    <script src="./app.js?v=intro-video-20260515"></script>
+  </body>
+</html>
