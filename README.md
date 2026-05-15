@@ -9,6 +9,7 @@ Upload the contents of this folder to the root of a GitHub repository, then enab
 This build keeps the site lightweight enough for GitHub's browser uploader:
 
 - All images are below 25MB.
+- Web MP3 audio files are included for the built-in track player.
 - The intro video uses the public YouTube embed.
 - Full track playback points to the public YouTube playlist.
 - Lyrics and visual archive files are included locally.
