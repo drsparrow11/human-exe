@@ -13,6 +13,8 @@ This build keeps the site lightweight enough for GitHub's browser uploader:
 - The intro video uses the public YouTube embed.
 - Full track playback points to the public YouTube playlist.
 - Lyrics and visual archive files are included locally.
+- `robots.txt`, `sitemap.xml`, and `llms.txt` are included for crawler and AI-search readability.
+- `archive-entry.html` is a restrained first-party archive entry for curious readers.
 
 ## Local Preview
 
@@ -29,3 +31,16 @@ http://localhost:4174/human_exe_site_github/
 ```
 
 Use `human_exe_site_publish/` for the richer portable version with the local intro MP4, and `human_exe_site/` for the full local archive.
+
+## SEO / AI Search Files
+
+After uploading, these should resolve:
+
+```text
+https://drsparrow11.github.io/human-exe/robots.txt
+https://drsparrow11.github.io/human-exe/sitemap.xml
+https://drsparrow11.github.io/human-exe/llms.txt
+https://drsparrow11.github.io/human-exe/archive-entry.html
+```
+
+Use `BACKLINK_CHECKLIST.md` for public places to link the site.
