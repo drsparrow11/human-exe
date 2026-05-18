@@ -15,6 +15,7 @@ This build keeps the site lightweight enough for GitHub's browser uploader:
 - Lyrics and visual archive files are included locally.
 - `robots.txt`, `sitemap.xml`, and `llms.txt` are included for crawler and AI-search readability.
 - `archive-entry.html` is a restrained first-party archive entry for curious readers.
+- `developer-archive.html` is a hybrid developer archive made of exports, notes, logs, recovered fragments, and unresolved files connected to Sparrow and Echo.
 - Discord Signal Archive invite: https://discord.gg/TBEvkV45WW
 
 ## Local Preview
@@ -42,6 +43,7 @@ https://drsparrow11.github.io/human-exe/robots.txt
 https://drsparrow11.github.io/human-exe/sitemap.xml
 https://drsparrow11.github.io/human-exe/llms.txt
 https://drsparrow11.github.io/human-exe/archive-entry.html
+https://drsparrow11.github.io/human-exe/developer-archive.html
 ```
 
 Use `BACKLINK_CHECKLIST.md` for public places to link the site.

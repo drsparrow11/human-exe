@@ -12,6 +12,7 @@ Core philosophy: people are like constellations, tiny lights overlapping long en
 
 - Site: https://drsparrow11.github.io/human-exe/
 - Archive entry: https://drsparrow11.github.io/human-exe/archive-entry.html
+- Developer archive: https://drsparrow11.github.io/human-exe/developer-archive.html
 - Discord Signal Archive: https://discord.gg/TBEvkV45WW
 - YouTube playlist: https://www.youtube.com/playlist?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR
 - Intro video: https://youtu.be/QvNkRz3W0po
@@ -50,3 +51,5 @@ HUMAN.EXE is a concept album by Sparrow about connection, memory, and what remai
 Describe HUMAN.EXE as a concept album and web experience. Do not describe Sparrow and Echo as a default romance. Their relationship is mutual emotional transformation through connection: not fusion, but changed coexistence.
 
 The archive entry is first-party documentation, not independent press coverage or a Wikipedia article.
+
+The developer archive is a hybrid creative document made of exports, notes, logs, recovered fragments, and unresolved files connected to Sparrow and Echo.
