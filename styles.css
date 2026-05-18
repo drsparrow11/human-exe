@@ -536,6 +536,43 @@ main {
   justify-content: flex-end;
 }
 
+.discord-action,
+.discord-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.discord-mark {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  flex: 0 0 auto;
+  border-radius: 8px 8px 5px 5px;
+  background: currentColor;
+  opacity: 0.92;
+}
+
+.discord-mark::before,
+.discord-mark::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.discord-mark::before {
+  left: 5px;
+}
+
+.discord-mark::after {
+  right: 5px;
+}
+
 .section-heading {
   margin-bottom: 28px;
 }
