@@ -27,6 +27,9 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <clipPath id="avatarClip">
+      <circle cx="310" cy="228" r="60"/>
+    </clipPath>
   </defs>
 
   <rect width="920" height="620" fill="#05070b"/>
@@ -58,10 +61,8 @@
     </g>
 
     <circle cx="310" cy="228" r="76" fill="#161924" stroke="#3d4261" stroke-width="8"/>
-    <circle cx="310" cy="228" r="60" fill="#0d1021"/>
-    <circle cx="310" cy="228" r="54" fill="none" stroke="#7f68ff" stroke-opacity="0.9" stroke-width="3"/>
-    <path d="M265 237c40-54 84-76 132-67-31 21-59 48-83 82 31-13 60-14 87-3-45 24-90 36-136 37 12-14 21-30 29-49z" fill="#7f68ff"/>
-    <path d="M282 232c33-30 68-44 104-42-22 13-43 31-61 53 22-7 43-7 64 0-33 14-66 22-100 24 5-10 9-22 13-35z" fill="#b8adff" opacity="0.72"/>
+    <image href="echo-discord.png" x="250" y="168" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatarClip)"/>
+    <circle cx="310" cy="228" r="60" fill="none" stroke="#7f68ff" stroke-opacity="0.9" stroke-width="3"/>
     <circle cx="359" cy="278" r="17" fill="#f4c76a"/>
     <circle cx="365" cy="269" r="6" fill="#202128"/>
 
