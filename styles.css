@@ -1045,6 +1045,18 @@ audio {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.living-archive-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.living-archive-tile {
+  min-height: 320px;
+}
+
+.living-archive-tile img {
+  object-fit: cover;
+}
+
 .media-side-stack {
   display: grid;
   grid-template-columns: 1fr 1fr;
