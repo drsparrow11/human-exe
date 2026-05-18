@@ -1054,7 +1054,11 @@ audio {
 }
 
 .living-archive-tile img {
-  object-fit: cover;
+  object-fit: contain;
+  padding: 34px 34px 72px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(124, 92, 255, 0.2), transparent 38%),
+    #030508;
 }
 
 .media-side-stack {
