@@ -1046,19 +1046,15 @@ audio {
 }
 
 .living-archive-grid {
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 440px);
 }
 
 .living-archive-tile {
-  min-height: 320px;
+  min-height: 296px;
 }
 
 .living-archive-tile img {
-  object-fit: contain;
-  padding: 34px 34px 72px;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(124, 92, 255, 0.2), transparent 38%),
-    #030508;
+  object-fit: cover;
 }
 
 .media-side-stack {
@@ -1473,6 +1469,10 @@ footer {
   .fragment-grid,
   .media-grid {
     grid-template-columns: 1fr;
+  }
+
+  .living-archive-grid {
+    grid-template-columns: minmax(260px, min(100%, 440px));
   }
 
   .media-tile.featured {
