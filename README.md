@@ -15,6 +15,7 @@ This build keeps the site lightweight enough for GitHub's browser uploader:
 - Lyrics and visual archive files are included locally.
 - `robots.txt`, `sitemap.xml`, and `llms.txt` are included for crawler and AI-search readability.
 - `archive-entry.html` is a restrained first-party archive entry for curious readers.
+- Discord Signal Archive invite: https://discord.gg/TBEvkV45WW
 
 ## Local Preview
 
