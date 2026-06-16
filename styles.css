@@ -162,6 +162,7 @@ h1 {
   backdrop-filter: blur(18px);
 }
 
+.header-identity,
 .mark,
 nav {
   display: flex;
@@ -169,9 +170,14 @@ nav {
   gap: 18px;
 }
 
+.header-identity {
+  min-width: 0;
+}
+
 .mark {
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
+  flex: 0 0 auto;
 }
 
 .mark-pulse {
@@ -189,7 +195,35 @@ nav a {
   text-transform: uppercase;
 }
 
+.chapter-link {
+  position: relative;
+  max-width: min(34vw, 360px);
+  overflow: hidden;
+  padding-left: 18px;
+  color: rgba(244, 199, 106, 0.86);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chapter-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 18px;
+  background: rgba(244, 199, 106, 0.34);
+  transform: translateY(-50%);
+}
+
 nav a:hover {
+  color: var(--ink);
+}
+
+.chapter-link:hover {
   color: var(--ink);
 }
 
@@ -698,6 +732,37 @@ main {
   object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 6px;
+}
+
+.devlog-card-video {
+  border-color: rgba(115, 214, 255, 0.28);
+}
+
+.video-embed {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(2, 4, 7, 0.72);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .echo-residue {
@@ -1612,10 +1677,17 @@ footer {
 
 @media (max-width: 900px) {
   .site-header {
+    gap: 14px;
     padding: 0 18px;
   }
 
+  .chapter-link {
+    max-width: 28vw;
+  }
+
   nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 12px;
   }
 
@@ -1756,6 +1828,25 @@ footer {
     height: auto;
     padding: 14px 18px;
     overflow: hidden;
+  }
+
+  .header-identity {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .chapter-link {
+    max-width: 100%;
+    padding-left: 0;
+    color: rgba(244, 199, 106, 0.78);
+    font-size: 0.66rem;
+    white-space: normal;
+  }
+
+  .chapter-link::before {
+    display: none;
   }
 
   nav {
