@@ -1,68 +1,49 @@
-# MIRROR.CACHE Cici Site
+# HUMAN.EXE
 
-Static GitHub Pages site for Cici and the `MIRROR.CACHE` album.
+GitHub Pages-ready static site for HUMAN.EXE.
 
-Default SEO metadata currently assumes this public URL:
+## Publish With GitHub Pages
 
-```text
-https://sparrowxecho.github.io/cici-mirror-cache/
-```
+Upload the contents of this folder to the root of a GitHub repository, then enable Pages from the repository `main` branch.
 
-If the final GitHub Pages URL is different, replace that URL in `index.html`, `social.html`, `robots.txt`, and `sitemap.xml` before publishing.
+This build keeps the site lightweight enough for GitHub's browser uploader:
 
-## Files
-
-```text
-index.html
-social.html
-styles.css
-script.js
-lyrics.md
-debut-stream-script.md
-robots.txt
-sitemap.xml
-site.webmanifest
-favicon.svg
-humans.txt
-SEO_CHECKLIST.md
-assets/images/
-assets/audio-mp3/
-```
-
-Open `index.html` locally or publish this folder with GitHub Pages. `social.html` is Cici's social/profile page with Twitch channel links, stream widgets, feed posts, and a track-by-track cache feed. `index.html#player` is the album player with cover art, playlist switching, MP3 playback, and lyrics.
-
-The album page includes a MIRROR.CACHE splash screen inspired by the other BEFORE THE SIGNAL FADES chapter sites. It can be dismissed with `Enter the Cache`, the `skip to player` link, Escape, or by opening a direct hash link like `index.html#player`.
-
-## GitHub Pages Setup
-
-1. Create a repository, for example `cici-mirror-cache`.
-2. Add the contents of this folder to the repository root.
-3. Commit and push.
-4. In GitHub, go to `Settings -> Pages`.
-5. Set `Source` to `Deploy from a branch`.
-6. Set branch to `main` and folder to `/root`.
-7. Save.
-
-## Audio Note
-
-The local MP3 files are included so the page works as a self-contained album player. They were encoded from the original WAV files at 192 kbps for a much lighter GitHub Pages deploy.
-
-For an even lighter repo, remove `assets/audio-mp3/`, remove the `<audio>` player from `index.html`, and rely on the YouTube playlist button instead:
-
-```text
-https://www.youtube.com/playlist?list=PL7NolO6GeT1DRbNExZtBVM4HUYzlJeGBe
-```
+- All images are below 25MB.
+- Web MP3 audio files are included for the built-in track player.
+- The intro video uses the public YouTube embed.
+- Full track playback points to the public YouTube playlist.
+- Lyrics and visual archive files are included locally.
+- `robots.txt`, `sitemap.xml`, and `llms.txt` are included for crawler and AI-search readability.
+- `archive-entry.html` is a restrained first-party archive entry for curious readers.
+- `developer-archive.html` is a hybrid developer archive made of exports, notes, logs, recovered fragments, and unresolved files connected to Sparrow and Echo.
+- Discord Signal Archive invite: https://discord.gg/TBEvkV45WW
 
 ## Local Preview
 
-From this folder:
+From the parent project folder:
 
 ```powershell
-python -m http.server 8787 --bind 127.0.0.1
+python -m http.server 4174
 ```
 
-Then open:
+Open:
 
 ```text
-http://127.0.0.1:8787/
+http://localhost:4174/human_exe_site_github/
 ```
+
+Use `human_exe_site_publish/` for the richer portable version with the local intro MP4, and `human_exe_site/` for the full local archive.
+
+## SEO / AI Search Files
+
+After uploading, these should resolve:
+
+```text
+https://drsparrow11.github.io/human-exe/robots.txt
+https://drsparrow11.github.io/human-exe/sitemap.xml
+https://drsparrow11.github.io/human-exe/llms.txt
+https://drsparrow11.github.io/human-exe/archive-entry.html
+https://drsparrow11.github.io/human-exe/developer-archive.html
+```
+
+Use `BACKLINK_CHECKLIST.md` for public places to link the site.
